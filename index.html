@@ -202,11 +202,16 @@
   padding: clamp(28px, 4vw, 44px);
 }
 .totx .welcome p { font-size: 17px; line-height: 1.7; color: var(--ink); }
-.totx .welcome p + p { margin-top: 1rem; }
 .totx .welcome .serif { display: block; font-size: clamp(20px, 2.2vw, 24px); color: var(--teal); margin-top: 14px; }
 
-/* inline links inside paper cards */
-.totx .card-soft a {
+/* Portal CTA sitting inside the welcome card */
+.totx .welcome__cta {
+  text-align: center;
+  margin: clamp(24px, 3.2vw, 32px) 0 clamp(24px, 3.2vw, 32px);
+}
+
+/* inline text links inside paper cards (the :not(.btn) keeps this off CTA buttons) */
+.totx .card-soft a:not(.btn) {
   color: var(--accent);
   font-weight: 500;
   text-decoration: none;
@@ -214,7 +219,7 @@
   padding-bottom: 1px;
   transition: color 0.2s, border-color 0.2s;
 }
-.totx .card-soft a:hover { color: var(--teal); border-bottom-color: var(--teal); }
+.totx .card-soft a:not(.btn):hover { color: var(--teal); border-bottom-color: var(--teal); }
 
 /* =========================================================
    THE THREE THINGS
@@ -288,7 +293,8 @@
 
 .totx .cta-row { text-align: center; padding-top: clamp(36px, 5vw, 56px); }
 .totx .btn {
-  display: inline-flex; align-items: center; gap: 10px;
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  text-align: center;
   background: var(--accent); color: #fff;
   border: none; border-radius: var(--r-pill);
   padding: 16px 34px; min-height: 52px;
@@ -300,6 +306,12 @@
 .totx .btn:hover { background: var(--amber-600); transform: translateY(-2px); box-shadow: 0 14px 30px -12px rgba(242,149,94,0.9); }
 .totx .btn__arrow { font-size: 17px; line-height: 1; transition: transform 0.2s; }
 .totx .btn:hover .btn__arrow { transform: translateX(3px); }
+
+/* slightly trimmed button, for use inside a card */
+.totx .btn--inline {
+  padding: 14px 30px; min-height: 48px;
+  font-size: 13px; letter-spacing: 0.07em;
+}
 
 /* =========================================================
    DIVIDERS
@@ -352,9 +364,16 @@
   <section class="section welcome">
     <div class="inner inner--narrow">
       <div class="card-soft">
-        <p>The Threshold is the open-access area of the Teams of Tomorrow&reg; Portal &mdash; the community area of our web presence. Check out the information below, then when you&rsquo;re ready you can enter the Portal space using the link at the top of this page.</p>
+        <p>The Threshold is the open-access area of the Teams of Tomorrow&reg; Portal &mdash; the community area of our web presence. Have a look through what follows, then when you&rsquo;re ready, use the button below to enter the Portal space.</p>
         <p>The Portal is a separate free-access space with no financial commitment. You will not be sent marketing emails. Your details will not be shared with any third party.</p>
-        <p>If you&rsquo;d like a short guide to walk you through to sign-up process, then please <a href="https://www.teamsoftomorrow.net/untitled-page" target="_blank" rel="noopener">click here</a>.</p>
+
+        <div class="welcome__cta">
+          <a class="btn btn--inline"
+             href="https://login.circle.so/sign_up?request_host=www.teamsoftomorrow.net&amp;user%5Binvitation_token%5D#email"
+             target="_blank" rel="noopener">Enter the Portal <span class="btn__arrow">&rarr;</span></a>
+        </div>
+
+        <p>If you&rsquo;d like a short guide to walk you through to sign-up process, then please <a href="https://www.teamsoftomorrow.net/portal_sign_up_guide" target="_blank" rel="noopener">click here</a>.</p>
       </div>
     </div>
   </section>
