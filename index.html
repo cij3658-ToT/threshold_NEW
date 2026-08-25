@@ -1,4 +1,5 @@
 
+
 <!-- =========================================================
      TEAMS OF TOMORROW — The Threshold
      Paste this entire block into a Circle.so Custom HTML block.
@@ -201,7 +202,19 @@
   padding: clamp(28px, 4vw, 44px);
 }
 .totx .welcome p { font-size: 17px; line-height: 1.7; color: var(--ink); }
+.totx .welcome p + p { margin-top: 1rem; }
 .totx .welcome .serif { display: block; font-size: clamp(20px, 2.2vw, 24px); color: var(--teal); margin-top: 14px; }
+
+/* inline links inside paper cards */
+.totx .card-soft a {
+  color: var(--accent);
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(229,130,74,0.45);
+  padding-bottom: 1px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.totx .card-soft a:hover { color: var(--teal); border-bottom-color: var(--teal); }
 
 /* =========================================================
    THE THREE THINGS
@@ -339,8 +352,9 @@
   <section class="section welcome">
     <div class="inner inner--narrow">
       <div class="card-soft">
-        <p>This is the Threshold &mdash; the first space in Teams of Tomorrow&reg;. If you have just completed the Regenerative Leader Scorecard, something in you was already asking questions.</p>
-        <p class="serif">This is where you begin to find out what they are.</p>
+        <p>The Threshold is the open-access area of the Teams of Tomorrow&reg; Portal &mdash; the community area of our web presence. Check out the information below, then when you&rsquo;re ready you can enter the Portal space using the link at the top of this page.</p>
+        <p>The Portal is a separate free-access space with no financial commitment. You will not be sent marketing emails. Your details will not be shared with any third party.</p>
+        <p>If you&rsquo;d like a short guide to walk you through to sign-up process, then please <a href="https://www.teamsoftomorrow.net/untitled-page" target="_blank" rel="noopener">click here</a>.</p>
       </div>
     </div>
   </section>
