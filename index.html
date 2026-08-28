@@ -397,7 +397,7 @@
         <article class="pcard">
           <p class="eyebrow">Once a month, live</p>
           <h3>The Monthly Master Class</h3>
-          <p>60 to 75 minutes with Elly or Chris on one aspect of regenerative leadership. A real teaching, with room for dialogue at the end. Not a webinar, not a pitch. Recorded if you miss it &mdash; but the live room is where it happens.</p>
+          <p>60 to 75 minutes with Elly or Chris on one aspect of regenerative leadership. A real learning experience and an introduction to dialogue. Not a webinar, not a pitch and not recorded  &mdash; the live room is where it happens.</p>
         </article>
         <article class="pcard">
           <p class="eyebrow">Small and growing</p>
@@ -479,47 +479,3 @@
 
 <!-- Footer is a separate reusable block — paste tot-footer.html after this block in Circle. -->
 
-<!-- ============================== TWEAKS (preview only — remove before final paste to Circle) ============================== -->
-<div id="tweaks-root"></div>
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-<script type="text/babel" src="tweaks-panel.jsx"></script>
-<script type="text/babel">
-const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-  "accent": "#e5824a",
-  "band": "#3c5a3a",
-  "heroPhoto": true
-}/*EDITMODE-END*/;
-
-function applyTweaks(t) {
-  const x = document.getElementById('totx');
-  if (x) {
-    x.style.setProperty('--accent', t.accent);
-    x.style.setProperty('--band', t.band);
-    x.classList.toggle('no-hero-photo', !t.heroPhoto);
-  }
-}
-
-function App() {
-  const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
-  React.useEffect(() => { applyTweaks(t); }, [t]);
-  return (
-    <TweaksPanel title="Tweaks">
-      <TweakSection label="Accent" />
-      <TweakColor label="Highlight" value={t.accent}
-        options={["#f2955e", "#e5824a", "#a4bf69", "#bfa084"]}
-        onChange={(v) => setTweak('accent', v)} />
-      <TweakSection label="Immersive bands" />
-      <TweakColor label="Band colour" value={t.band}
-        options={["#3c5a3a", "#034159", "#02313f", "#02212c"]}
-        onChange={(v) => setTweak('band', v)} />
-      <TweakSection label="Hero" />
-      <TweakToggle label="Show arrival photo" value={t.heroPhoto}
-        onChange={(v) => setTweak('heroPhoto', v)} />
-    </TweaksPanel>
-  );
-}
-
-ReactDOM.createRoot(document.getElementById('tweaks-root')).render(<App />);
-</script>
