@@ -343,6 +343,20 @@
 @media (prefers-reduced-motion: reduce) {
   .totx * { transition-duration: 0.001ms !important; }
 }
+     .about .bio {
+  max-width: 46rem;
+  margin: 0 auto;
+}
+
+.about .bio p {
+  font-size: clamp(1.1rem, 1.6vw, 1.3rem);
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+}
+
+.about .bio strong {
+  font-weight: 600;
+}
 </style>
 
 <!-- ============================== THRESHOLD PAGE ============================== -->
@@ -430,25 +444,16 @@
 
   <div class="hr hr--dot"><span></span></div>
 
-  <!-- ABOUT -->
-  <section class="section about">
-    <div class="inner inner--narrow">
-      <p class="eyebrow">The hosts</p>
-      <h2>About Elly and Chris</h2>
-      <div class="people">
-        <div class="person">
-          <p class="name">Elena Hinova-McNamee</p>
-          <p class="role">Learning leader &middot; executive coach &middot; team coach</p>
-          <p>Elena has spent over 14 years researching and working with what allows leaders and teams to thrive &mdash; inside organisations and alongside them, on the questions that move things forward..</p>
-        </div>
-        <div class="person">
-          <p class="name">Chris Jackson</p>
-          <p class="role">Systems convenor &middot; learning leader &middot; team coach</p>
-          <p>Chris works at the intersection of leadership, dialogue, and regenerative practice &mdash; building the spaces where the real thinking can happen.</p>
-        </div>
-      </div>
+ <!-- ABOUT -->
+<section class="section about">
+  <div class="inner inner--narrow">
+    <p class="eyebrow">The hosts</p>
+    <h2>About Elly and Chris</h2>
+    <div class="bio">
+      <p><strong>Chris Jackson</strong> and <strong>Dr Elena Hinova-McNamee</strong> are the co-founders of Teams of Tomorrow. Together they curate spaces which inspire and enable founders, CEOs and leadership teams to navigate the increasing complexity of modern leadership. Their work combines leadership transformation, team coaching, peer learning and thriving leadership practices to enable leaders to build confidence, belonging and clarity.</p>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- APPROACH PULL QUOTE -->
   <section class="section section--tight">
